@@ -9,6 +9,9 @@ Welcome to the **Venamo**! This is a financial technology application that allow
   - [🚀 **Features**](#-features)
   - [🛠 **Tech Stack**](#-tech-stack)
   - [💻 **Installation**](#-installation)
+    - [**Use Docker for Installation**](#use-docker-for-installation)
+    - [**Or Follow These Steps:**](#or-follow-these-steps)
+    - [Additional Notes](#additional-notes)
   - [📁 **Project Structure**](#-project-structure)
   - [🗄 **Database Schema**](#-database-schema)
   - [📦 **Modules**](#-modules)
@@ -39,12 +42,28 @@ Venamo is a payment app that enables peer-to-peer (P2P) transactions, allowing u
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 - **State Management**: [Recoil](https://recoiljs.org/)
 
+Your installation instructions look clear and well-structured! However, there are a few minor improvements and clarifications that can enhance clarity and correctness. Here’s a refined version:
+
+---
+
 ## 💻 **Installation**
+
+### **Use Docker for Installation**
+1. **Build the Docker image**:
+    ```bash
+    docker build -t image_name .
+    ```
+2. **Run the Docker container**:
+    ```bash
+    docker run -p 3000:3000 image_name
+    ```
+
+### **Or Follow These Steps:**
 
 1. **Clone the repository**:
     ```bash
     git clone https://github.com/miravanisri/Venamo_PaymentApp.git
-    cd project-name
+    cd Venamo_PaymentApp
     ```
 
 2. **Install dependencies**:
@@ -53,27 +72,38 @@ Venamo is a payment app that enables peer-to-peer (P2P) transactions, allowing u
     ```
 
 3. **Configure environment variables**:
-    Create a `.env` file in the project root and add the following variables:
-    ```bash
+    Create a `.env` file in the project root and add the following variable:
+    ```plaintext
     DATABASE_URL=your_database_url
     ```
+
 4. **Set up the database**:
     ```bash
     npx prisma migrate dev --name init
+    ```
 
-   ```
-5. **Generate the client**
-   ```bash
-   npx prisma generate
-   ```
-6. **Setting Up Initial Data in Your Database with Prisma**
-   ```bash
-   npx prisma db seed
-   ```
+5. **Generate the Prisma client**:
+    ```bash
+    npx prisma generate
+    ```
+
+6. **Seed the database with initial data**:
+    ```bash
+    npx prisma db seed
+    ```
+
 7. **Run the application**:
     ```bash
     npm run dev
     ```
+
+---
+
+### Additional Notes
+- **Database URL**: Make sure to replace `your_database_url` with the actual database connection string.
+- **Container Port**: Ensure that the application inside the Docker container is listening on port `3000`, as you are mapping it to the host.
+
+
 
 ## 📁 **Project Structure**
 ```plaintext
