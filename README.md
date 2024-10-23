@@ -1,5 +1,7 @@
 # 📱 **VENAMO**
 
+https://github.com/user-attachments/assets/51bda541-6815-484a-b9fc-3444e6b6850b
+
 Welcome to the **Venamo**! This is a financial technology application that allows users to send, receive, and manage their balances seamlessly. Built with a focus on **security** and **scalability**.
 
 ## 🗂 **Table of Contents**
